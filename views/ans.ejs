@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+<div class="jumbotron centeredh clr">
+  <div class="container">
+  <h1>Correct Answers</h1>
+  <br><br>
+  <div class="row">
+  <% ques.forEach(function(ques){ %>
+        <div class="question bg-white p-3 border-bottom">
+          <div class="d-flex flex-row align-items-center question-title">
+              <h3 class="text-danger">Q.</h3>
+              <h5 class="mt-1 ml-2"><%=ques.question%></h5>
+          </div><div class="ans ml-2">
+<label class="radio"> <span><%=ques.coption%></span>
+</label>    
+</div></div>
+  <% }); %>
+  </div>
+  <br>
+  <a href="/"><button class="btn btn-primary">Go Back</button></a>
+  </div>
+  </div>
+<%- include("partials/footer"); -%>
